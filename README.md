@@ -5,7 +5,7 @@ A Python 3 calculator used from the Terminal, built step by step in SCCM4910.
 Add, subtract, multiply and divide two numbers; display the result.
 ## How to run it
 
-1. run: python3 calculator.py
+1. run: ./run.sh
 
 2. Enter the first number, operator (+ - * /), then second number.
 
