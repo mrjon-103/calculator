@@ -1,0 +1,9 @@
+operation,a,b
+add,2,3
+divide,9,0
+multiply,4,5
+power,2,3
+add,hello,1
+divide,5,2
+subtract, 5.5 , 2.25
+multiply,,2

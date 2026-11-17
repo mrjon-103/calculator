@@ -1,0 +1,7 @@
+row,status,result,error_code
+1,OK,5,
+2,OK,6,
+3,OK,-6,
+4,OK,3.5,
+5,OK,3.75,
+6,OK,-3,
