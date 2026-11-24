@@ -8,14 +8,43 @@ from calculator import add, subtract, multiply, divide
 
 
 def process_calculation(operation, a_text, b_text):
-    """Return (status, result, error_code) for one calculation.
+    try:
+        status = ""
+        result = ""
+        error_code = ""
 
-    Inputs are strings. Trim whitespace and use the four imported lab functions.
-    Success: ("OK", numeric_result, "").
-    The error_code is empty on success because there is no error to report.
-    Error: ("ERROR", "", error_code).
+        a = int(a_text)
+        b = int(b_text)
 
-    Check errors in order: UNKNOWN_OPERATION, INVALID_NUMBER, DIVISION_BY_ZERO.
-    See the brief for the full contract. You may add small helper functions.
-    """
-    raise NotImplementedError("Complete process_calculation for the coursework")
+        match operation:
+            case "add":
+                result = str(add(a, b))
+
+            case "subtract":
+                result = str(subtract(a, b))
+
+            case "multiply":
+                result = str(multiply(a, b))
+
+            case "divide":
+                if (a_text == 0) or (b_text == 0):
+                    status = "ERROR"
+                    error_code = "DIVISION_BY_ZERO"
+
+                else:
+                    result = str(subtract(a, b))
+
+            case _:
+                status = "ERROR"
+                error_code = "UNKNOWN_OPERATION"
+
+        if status == "":
+            status = "OK" 
+
+    except:
+        status = "ERROR"
+        error_code = "INVALID_NUMBER"
+
+    return (status, result, error_code)
+            
+        
