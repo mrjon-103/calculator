@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.2.0, pluggy-1.7.0 -- /home/joshc/calculator/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/joshc/calculator
+collecting ... collected 8 items
+
+test_batch_calculator.py::test_batch_correct FAILED                      [ 12%]
+test_batch_calculator.py::test_batch_on_error FAILED                     [ 25%]
+test_calculator.py::test_add PASSED                                      [ 37%]
+test_calculator.py::test_divide PASSED                                   [ 50%]
+test_calculator.py::test_multiply PASSED                                 [ 62%]
+test_calculator.py::test_subtract PASSED                                 [ 75%]
+test_calculator.py::test_negitive_addition PASSED                        [ 87%]
+test_calculator.py::test_circleArea PASSED                               [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_batch_correct ______________________________
+
+    def test_batch_correct():
+>       assert process_calculation("subtract", "6", "3") == 3
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_batch_calculator.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+operation = 'subtract', a_text = '6', b_text = '3'
+
+    def process_calculation(operation, a_text, b_text):
+        """Return (status, result, error_code) for one calculation.
+    
+        Inputs are strings. Trim whitespace and use the four imported lab functions.
+        Success: ("OK", numeric_result, "").
+        The error_code is empty on success because there is no error to report.
+        Error: ("ERROR", "", error_code).
+    
+        Check errors in order: UNKNOWN_OPERATION, INVALID_NUMBER, DIVISION_BY_ZERO.
+        See the brief for the full contract. You may add small helper functions.
+        """
+>       raise NotImplementedError("Complete process_calculation for the coursework")
+E       NotImplementedError: Complete process_calculation for the coursework
+
+batch_calculator.py:21: NotImplementedError
+_____________________________ test_batch_on_error ______________________________
+
+    def test_batch_on_error():
+>       assert process_calculation("divisio", "6", "2") == ("ERROR", "", "UNKNOWN_OPERATION")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_batch_calculator.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+operation = 'divisio', a_text = '6', b_text = '2'
+
+    def process_calculation(operation, a_text, b_text):
+        """Return (status, result, error_code) for one calculation.
+    
+        Inputs are strings. Trim whitespace and use the four imported lab functions.
+        Success: ("OK", numeric_result, "").
+        The error_code is empty on success because there is no error to report.
+        Error: ("ERROR", "", error_code).
+    
+        Check errors in order: UNKNOWN_OPERATION, INVALID_NUMBER, DIVISION_BY_ZERO.
+        See the brief for the full contract. You may add small helper functions.
+        """
+>       raise NotImplementedError("Complete process_calculation for the coursework")
+E       NotImplementedError: Complete process_calculation for the coursework
+
+batch_calculator.py:21: NotImplementedError
+=========================== short test summary info ============================
+FAILED test_batch_calculator.py::test_batch_correct - NotImplementedError: Co...
+FAILED test_batch_calculator.py::test_batch_on_error - NotImplementedError: C...
+========================= 2 failed, 6 passed in 0.02s ==========================

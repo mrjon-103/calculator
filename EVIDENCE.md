@@ -16,7 +16,7 @@ submit the final CI run as a separate PDF or screenshot.
 
 ## 1. Starting point and Git review
 
-- Starting commit: 89ba7b599625197fedde195452bf6a34874c86cf
+- Starting commit: 9496e68a124fe824bb4cd8558392ae3c4b6a65f7
 - Reused lab files, tests and examples: For this coursework I am reusing all aspects of the in lab calculator build in weeks 1 - 5.
 - Feature branch and PR: mrjon-103, https://github.com/mrjon-103/calculator.git 
 - Self-review: currently, running git diff shows a clean tree however the current file and the files added from the student pack have not been added to the git workflow but will be in the next commit. 
